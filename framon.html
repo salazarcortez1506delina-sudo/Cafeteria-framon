@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cafetería Framon, sabores tradicionales y momentos especiales en Trinidad, Beni.">
+
+    <title>Cafetería Framon</title>
+
+    <link rel="stylesheet" href="framon.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="logo">
+            ☕ Cafetería Framon
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#menu">Menú</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#pedido">Mi pedido</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- INICIO -->
+    <section class="hero" id="inicio">
+        <div class="hero-contenido">
+            <span class="etiqueta">BIENVENIDOS A FRAMON</span>
+
+            <h1>El sabor de nuestra tierra beniana</h1>
+
+            <p>
+                Disfruta de deliciosas comidas, bebidas y momentos
+                especiales en un ambiente familiar.
+            </p>
+
+            <a href="#menu" class="btn">Descubrir nuestro menú</a>
+        </div>
+    </section>
+
+    <!-- BIENVENIDA -->
+    <section class="bienvenida">
+        <h2>¡Bienvenidos a Cafetería Framon!</h2>
+
+        <p>
+            Un espacio donde el buen sabor, la tradición y la atención
+            familiar se unen para ofrecerte una experiencia agradable.
+        </p>
+    </section>
+
+    <!-- MENÚ -->
+    <section class="seccion" id="menu">
+        <h2>Nuestro menú</h2>
+
+        <p class="subtitulo">
+            Conoce nuestros productos y elige tus favoritos.
+        </p>
+
+        <div class="filtros">
+            <button class="filter-btn active" data-filter="todos">
+                Todos
+            </button>
+
+            <button class="filter-btn" data-filter="comida">
+                Comidas
+            </button>
+
+            <button class="filter-btn" data-filter="bebida">
+                Bebidas
+            </button>
+        </div>
+
+        <div id="productGrid" class="productos"></div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="nosotros" id="nosotros">
+        <div class="nosotros-contenido">
+            <h2>Sobre nosotros</h2>
+
+            <p>
+                Cafetería Framon es un emprendimiento que busca ofrecer
+                productos de calidad, con sabores tradicionales de
+                nuestra región y una atención amable para todos
+                nuestros clientes.
+            </p>
+
+            <p>
+                Nuestro propósito es brindar un espacio agradable
+                donde las familias y amigos puedan compartir,
+                disfrutar y crear momentos especiales.
+            </p>
+
+            <h3>Nuestra visión tecnológica</h3>
+
+            <p>
+                Incorporamos herramientas digitales y sistemas
+                informáticos para dar a conocer nuestros productos,
+                facilitar los pedidos y mejorar la comunicación
+                con nuestros clientes.
+            </p>
+        </div>
+    </section>
+
+    <!-- OPINIONES -->
+    <section class="seccion" id="opiniones">
+        <h2>Lo que dicen nuestros clientes</h2>
+
+        <div class="opiniones">
+            <div class="opinion">
+                <h3>★★★★★</h3>
+                <p>“Un lugar agradable y con productos deliciosos.”</p>
+            </div>
+
+            <div class="opinion">
+                <h3>★★★★★</h3>
+                <p>“Me encanta el sabor de sus masacos y sus bebidas.”</p>
+            </div>
+
+            <div class="opinion">
+                <h3>★★★★★</h3>
+                <p>“Muy buena atención y precios accesibles.”</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARRITO -->
+    <section class="pedido" id="pedido">
+        <h2>🛒 Mi carrito de compras</h2>
+
+        <p>Revisa los productos que deseas pedir.</p>
+
+        <div id="cartItems"></div>
+
+        <div class="total">
+            Total: <span id="cartTotal">Bs 0.00</span>
+        </div>
+
+        <button class="btn confirmar" onclick="enviarPedido()">
+            Confirmar pedido por WhatsApp
+        </button>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto">
+        <h2>Contáctanos</h2>
+
+        <p>
+            <strong>WhatsApp:</strong>
+            <span>Realiza tus pedidos por WhatsApp.</span>
+        </p>
+
+        <p>
+            <strong>Dirección:</strong>
+            Calle 27 de Mayo y Sucre, Trinidad, Beni, Bolivia.
+        </p>
+
+        <div class="location-container">
+            <h3>Encuéntranos aquí</h3>
+
+            <iframe
+                src="https://maps.google.com/maps?q=Calle%2027%20de%20Mayo%20y%20Sucre%2C%20Trinidad%2C%20Beni%2C%20Bolivia&output=embed"
+                width="100%"
+                height="350"
+                style="border:0;"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <h3>Síguenos en nuestras redes sociales</h3>
+
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=61596348824789"
+               target="_blank" rel="noopener noreferrer">Facebook</a>
+
+            <a href="https://www.instagram.com/fram0n?knvt=MTExendyenlpZTF1eQ=="
+               target="_blank" rel="noopener noreferrer">Instagram</a>
+
+            <a href="https://www.tiktok.com/@framon23?_r=1&_t=ZS-9BUefLNKWU0"
+               target="_blank" rel="noopener noreferrer">TikTok</a>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <h3>☕ Cafetería Framon</h3>
+
+        <p>El sabor que une a las familias.</p>
+
+        <p>© 2026 Cafetería Framon - Trinidad, Beni, Bolivia.</p>
+    </footer>
+
+    <script src="framon.jvs.js"></script>
+
+</body>
+</html>
